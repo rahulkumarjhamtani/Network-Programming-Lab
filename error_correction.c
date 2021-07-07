@@ -28,13 +28,13 @@ void main() {
 
     for(i=0;i<7;i++)
 
-    printf("%d",data[i]);
+        printf("%d",data[i]);
 
     printf("\n\nEnter received data bits one by one\n");
 
     for(i=0;i<7;i++)
 
-    scanf("%d",&dataatrec[i]);
+        scanf("%d",&dataatrec[i]);
 
     c1=dataatrec[6]^dataatrec[4]^dataatrec[2]^dataatrec[0];
 
@@ -50,7 +50,8 @@ void main() {
 
     }
 
-    else {
+    else 
+    {
 
         printf("\nError on position %d",c);
 
