@@ -4,44 +4,44 @@ int main()
 
 {
 
-int i=0,count=0;
+    int i=0,count=0;
 
-char databits[80];
+    char databits[80];
 
-printf("Enter Data Bits: ");
+    printf("Enter Data Bits: ");
 
-scanf("%s",databits);
+    scanf("%s",databits);
 
-printf("Data Bits Before Bit Stuffing:%s",databits);
+    printf("Data Bits Before Bit Stuffing:%s",databits);
 
-printf("\nData Bits After Bit stuffing :");
+    printf("\nData Bits After Bit stuffing :");
 
-for(i=0; i<strlen(databits); i++)
+    for(i=0; i<strlen(databits); i++)
 
-{
+    {
 
-if(databits[i]=='1')
+        if(databits[i]=='1')
 
-count++;
+            count++;
 
-else
+        else
 
-count=0;
+            count=0;
 
-printf("%c",databits[i]);
+        printf("%c",databits[i]);
 
-if(count==5)
+            if(count==5)
 
-{
+            {
 
-printf("0");
+                printf("0");
 
-count=0;
+                count=0;
 
-}
+            }
 
-}
+    }
 
-return 0;
+    return 0;
 
 }
