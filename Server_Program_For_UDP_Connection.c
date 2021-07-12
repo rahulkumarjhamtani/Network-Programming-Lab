@@ -32,9 +32,11 @@ int main(){
 		/* Try to receive any incoming UDP datagram. Address and port of requesting client will be stored on serverStorage variable */ 
 		nBytes = recvfrom(udpSocket,buffer,1024,0,(struct sockaddr *)&serverStorage, &addr_size); 
 		
-		/*Convert message received to uppercase*/ 
-		for(i=0;i<nBytes-1;i++) 
-			buffer[i] = toupper(buffer[i]); 
+		printf("Receive from client %s\n",buffer);
+
+		// /*Convert message received to uppercase*/ 
+		// for(i=0;i<nBytes-1;i++) 
+		// 	buffer[i] = toupper(buffer[i]); 
 		
 		/*Send uppercase message back to client, using serverStorage as the address*/ 
 		sendto(udpSocket,buffer,nBytes,0,(struct sockaddr *)&serverStorage,addr_size); 
